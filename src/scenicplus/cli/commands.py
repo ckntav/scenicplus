@@ -752,7 +752,7 @@ def infer_region_to_gene(
         sep="\t", header = True, index = False)
 
 def _format_egrns(
-        eRegulons: List[eRegulon],
+        eRegulons: List,
         tf_to_gene: pd.DataFrame):
     """Helper function to format eRegulons to a pandas dataframe."""
     REGION_TO_GENE_COLUMNS = [

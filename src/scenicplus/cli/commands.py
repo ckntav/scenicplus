@@ -5,7 +5,7 @@ import pathlib
 import pickle
 import shutil
 import sys
-from typing import Callable, Dict, Iterator, List, Literal, Optional, Tuple, Union
+from typing import Callable, Dict, Iterator, List, Literal, Optional, Tuple, Union, TYPE_CHECKING
 
 import joblib
 import mudata
@@ -15,7 +15,8 @@ from importlib_resources import files
 from pycistarget.motif_enrichment_cistarget import cisTarget
 from pycistarget.motif_enrichment_dem import DEM
 
-from scenicplus.grn_builder.modules import eRegulon
+if TYPE_CHECKING:
+    from scenicplus.grn_builder.modules import eRegulon
 
 # Create logger
 level = logging.INFO
